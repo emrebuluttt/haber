@@ -1,0 +1,13 @@
+<div class="container">
+<div *ngFor="let Haber of haberler">
+    <h1>{{Haber.Baslik}}</h1>
+    <p>
+        <b>Kategori: </b><a href="#" [routerLink]="['/kategori',Haber.KategoriId]">{{Haber.KategoriAdi}}</a> &nbsp;
+        <b>Tarih: </b>{{Haber.Tarih}} &nbsp;
+        <b>Yazan: </b> <a href="#" [routerLink]="['/uyehaber',Haber.UyeId]">{{Haber.UyeKadi}}</a> &nbsp;
+        <b>Okunma: </b>{{Haber.Okunma}} &nbsp;
+        <a href="#" [routerLink]="['/haber',Haber.HaberId]">Haberi incele</a>
+    </p>
+    <hr>
+</div>
+</div>
